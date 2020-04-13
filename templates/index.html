@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        /* .center_squares{
-            display: inline-block;
-            align-items: center;
-        } */
-        
+    <style>        
         .square{
             outline: 1px solid black;
             width: 200px;
@@ -25,21 +20,21 @@
     </header>
 
     <main class="container">
-        {% if inputRoute == 'landing': %}
-            <div class="row center_squares">
+        <div class="row d-flex justify-content-center">
+            {% if inputRoute == 'landing': %}
                 <div class="square" style="background-color: blue;"></div>
                 <div class="square" style="background-color: blue;"></div>
                 <div class="square" style="background-color: blue;"></div>
-            </div>
-        {% elif inputRoute == 'times': %}
-            {% for i in range(times) %}
-            <div class="square" style="background-color: blue;"></div>
-            {% endfor %}
-        {% elif inputRoute == 'color': %}
-            {% for i in range(times) %}
-                <div class="square" style="background-color:{{color}};"></div>
-            {% endfor %}
-        {% endif %}
+            {% elif inputRoute == 'times': %}
+                {% for i in range(times) %}
+                    <div class="square" style="background-color: blue;"></div>
+                {% endfor %}
+            {% elif inputRoute == 'color': %}
+                {% for i in range(times) %}
+                    <div class="square" style="background-color:{{color}};"></div>
+                {% endfor %}
+            {% endif %}
+        </div>
     </main>
 </body>
 </html>
