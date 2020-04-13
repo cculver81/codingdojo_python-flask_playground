@@ -1,0 +1,6 @@
+.square{
+    outline: 1px solid black;
+    width: 200px;
+    min-height: 200px;
+    margin: 5px;
+}
