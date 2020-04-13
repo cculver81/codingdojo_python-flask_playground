@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        /* .center_squares{
+            display: inline-block;
+            align-items: center;
+        } */
+        
+        .square{
+            outline: 1px solid black;
+            width: 200px;
+            min-height: 200px;
+            margin: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header class="jumbotron jumbotron-fluid text-center">
+        <h2>Welcome!</h2>
+    </header>
+
+    <main class="container">
+        {% if inputRoute == 'landing': %}
+            <div class="row center_squares">
+                <div class="square" style="background-color: blue;"></div>
+                <div class="square" style="background-color: blue;"></div>
+                <div class="square" style="background-color: blue;"></div>
+            </div>
+        {% elif inputRoute == 'times': %}
+            {% for i in range(times) %}
+            <div class="square" style="background-color: blue;"></div>
+            {% endfor %}
+        {% elif inputRoute == 'color': %}
+            {% for i in range(times) %}
+                <div class="square" style="background-color:{{color}};"></div>
+            {% endfor %}
+        {% endif %}
+    </main>
+</body>
+</html>
+
+
